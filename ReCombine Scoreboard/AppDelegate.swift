@@ -2,8 +2,9 @@
 //  AppDelegate.swift
 //  ReCombine Scoreboard
 //
-//  Created by Kristin on 2/2/20.
-//  Copyright © 2020 JohnCrowson. All rights reserved.
+//  Created by Crowson, John on 12/10/19.
+//  Copyright © 2019 Crowson, John.
+//  Licensed under Apache License 2.0
 //
 
 import UIKit

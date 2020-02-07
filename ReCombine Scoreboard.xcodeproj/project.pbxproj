@@ -3,17 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7B4945E223E7644000A0071D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4945E123E7644000A0071D /* AppDelegate.swift */; };
 		7B4945E423E7644000A0071D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4945E323E7644000A0071D /* SceneDelegate.swift */; };
-		7B4945E623E7644000A0071D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4945E523E7644000A0071D /* ContentView.swift */; };
+		7B4945E623E7644000A0071D /* ScoreboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4945E523E7644000A0071D /* ScoreboardView.swift */; };
 		7B4945E823E7644600A0071D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4945E723E7644600A0071D /* Assets.xcassets */; };
 		7B4945EB23E7644600A0071D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4945EA23E7644600A0071D /* Preview Assets.xcassets */; };
 		7B4945EE23E7644600A0071D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B4945EC23E7644600A0071D /* LaunchScreen.storyboard */; };
-		7B4945F923E7644600A0071D /* ReCombine_ScoreboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4945F823E7644600A0071D /* ReCombine_ScoreboardTests.swift */; };
+		7B4945F923E7644600A0071D /* ScoreboardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4945F823E7644600A0071D /* ScoreboardViewModelTests.swift */; };
+		7B49460923E7653500A0071D /* Scoreboard+ReCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49460823E7653500A0071D /* Scoreboard+ReCombine.swift */; };
+		7B49460B23E8DDC300A0071D /* ScoreboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49460A23E8DDC300A0071D /* ScoreboardViewModel.swift */; };
+		7B49460E23ECE31200A0071D /* ReCombine in Frameworks */ = {isa = PBXBuildFile; productRef = 7B49460D23ECE31200A0071D /* ReCombine */; };
+		7B49461023ECE31200A0071D /* ReCombineTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7B49460F23ECE31200A0071D /* ReCombineTest */; };
+		7B49461223ECEEB300A0071D /* Scoreboard+ReCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49461123ECEEB300A0071D /* Scoreboard+ReCombineTests.swift */; };
+		7B49461423ECF47000A0071D /* ScoreAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49461323ECF47000A0071D /* ScoreAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +36,18 @@
 		7B4945DE23E7644000A0071D /* ReCombine Scoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReCombine Scoreboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4945E123E7644000A0071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B4945E323E7644000A0071D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B4945E523E7644000A0071D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7B4945E523E7644000A0071D /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
 		7B4945E723E7644600A0071D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B4945EA23E7644600A0071D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B4945ED23E7644600A0071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B4945EF23E7644600A0071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B4945F423E7644600A0071D /* ReCombine ScoreboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReCombine ScoreboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B4945F823E7644600A0071D /* ReCombine_ScoreboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReCombine_ScoreboardTests.swift; sourceTree = "<group>"; };
+		7B4945F823E7644600A0071D /* ScoreboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewModelTests.swift; sourceTree = "<group>"; };
 		7B4945FA23E7644600A0071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B49460823E7653500A0071D /* Scoreboard+ReCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scoreboard+ReCombine.swift"; sourceTree = "<group>"; };
+		7B49460A23E8DDC300A0071D /* ScoreboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewModel.swift; sourceTree = "<group>"; };
+		7B49461123ECEEB300A0071D /* Scoreboard+ReCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scoreboard+ReCombineTests.swift"; sourceTree = "<group>"; };
+		7B49461323ECF47000A0071D /* ScoreAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B49460E23ECE31200A0071D /* ReCombine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B49461023ECE31200A0071D /* ReCombineTest in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +93,10 @@
 			children = (
 				7B4945E123E7644000A0071D /* AppDelegate.swift */,
 				7B4945E323E7644000A0071D /* SceneDelegate.swift */,
-				7B4945E523E7644000A0071D /* ContentView.swift */,
+				7B4945E523E7644000A0071D /* ScoreboardView.swift */,
+				7B49460A23E8DDC300A0071D /* ScoreboardViewModel.swift */,
+				7B49460823E7653500A0071D /* Scoreboard+ReCombine.swift */,
+				7B49461323ECF47000A0071D /* ScoreAPIManager.swift */,
 				7B4945E723E7644600A0071D /* Assets.xcassets */,
 				7B4945EC23E7644600A0071D /* LaunchScreen.storyboard */,
 				7B4945EF23E7644600A0071D /* Info.plist */,
@@ -101,8 +116,9 @@
 		7B4945F723E7644600A0071D /* ReCombine ScoreboardTests */ = {
 			isa = PBXGroup;
 			children = (
-				7B4945F823E7644600A0071D /* ReCombine_ScoreboardTests.swift */,
+				7B4945F823E7644600A0071D /* ScoreboardViewModelTests.swift */,
 				7B4945FA23E7644600A0071D /* Info.plist */,
+				7B49461123ECEEB300A0071D /* Scoreboard+ReCombineTests.swift */,
 			);
 			path = "ReCombine ScoreboardTests";
 			sourceTree = "<group>";
@@ -123,6 +139,9 @@
 			dependencies = (
 			);
 			name = "ReCombine Scoreboard";
+			packageProductDependencies = (
+				7B49460D23ECE31200A0071D /* ReCombine */,
+			);
 			productName = "ReCombine Scoreboard";
 			productReference = 7B4945DE23E7644000A0071D /* ReCombine Scoreboard.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +160,9 @@
 				7B4945F623E7644600A0071D /* PBXTargetDependency */,
 			);
 			name = "ReCombine ScoreboardTests";
+			packageProductDependencies = (
+				7B49460F23ECE31200A0071D /* ReCombineTest */,
+			);
 			productName = "ReCombine ScoreboardTests";
 			productReference = 7B4945F423E7644600A0071D /* ReCombine ScoreboardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -173,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 7B4945D523E7644000A0071D;
+			packageReferences = (
+				7B49460C23ECE31200A0071D /* XCRemoteSwiftPackageReference "recombine" */,
+			);
 			productRefGroup = 7B4945DF23E7644000A0071D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -208,9 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B49460923E7653500A0071D /* Scoreboard+ReCombine.swift in Sources */,
 				7B4945E223E7644000A0071D /* AppDelegate.swift in Sources */,
 				7B4945E423E7644000A0071D /* SceneDelegate.swift in Sources */,
-				7B4945E623E7644000A0071D /* ContentView.swift in Sources */,
+				7B4945E623E7644000A0071D /* ScoreboardView.swift in Sources */,
+				7B49460B23E8DDC300A0071D /* ScoreboardViewModel.swift in Sources */,
+				7B49461423ECF47000A0071D /* ScoreAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B4945F923E7644600A0071D /* ReCombine_ScoreboardTests.swift in Sources */,
+				7B49461223ECEEB300A0071D /* Scoreboard+ReCombineTests.swift in Sources */,
+				7B4945F923E7644600A0071D /* ScoreboardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +502,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B49460C23ECE31200A0071D /* XCRemoteSwiftPackageReference "recombine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/recombine/recombine.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B49460D23ECE31200A0071D /* ReCombine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B49460C23ECE31200A0071D /* XCRemoteSwiftPackageReference "recombine" */;
+			productName = ReCombine;
+		};
+		7B49460F23ECE31200A0071D /* ReCombineTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B49460C23ECE31200A0071D /* XCRemoteSwiftPackageReference "recombine" */;
+			productName = ReCombineTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B4945D623E7644000A0071D /* Project object */;
 }

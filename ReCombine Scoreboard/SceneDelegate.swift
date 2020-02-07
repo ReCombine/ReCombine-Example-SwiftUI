@@ -2,8 +2,9 @@
 //  SceneDelegate.swift
 //  ReCombine Scoreboard
 //
-//  Created by Kristin on 2/2/20.
-//  Copyright © 2020 JohnCrowson. All rights reserved.
+//  Created by Crowson, John on 12/10/19.
+//  Copyright © 2019 Crowson, John.
+//  Licensed under Apache License 2.0
 //
 
 import UIKit
@@ -20,12 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let scoreboardView = ScoreboardView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            window.rootViewController = UIHostingController(rootView: scoreboardView)
             self.window = window
             window.makeKeyAndVisible()
         }
