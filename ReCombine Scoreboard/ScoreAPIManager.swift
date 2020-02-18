@@ -22,3 +22,9 @@ extension URLSession: ScoreAPIManager {
         return dataTaskPublisher(for: urlRequest).eraseToAnyPublisher()
     }
 }
+
+enum ScoreAPIStatus {
+    case none
+    case posting
+    case error
+}

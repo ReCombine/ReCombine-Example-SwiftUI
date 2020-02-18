@@ -18,7 +18,7 @@ class ScoreboardViewModelTests: XCTestCase {
     var cancellableSet: Set<AnyCancellable> = []
 
     override func setUp() {
-        mockStore = MockStore(state: Scoreboard.State())
+        mockStore = MockStore(state: Scoreboard.State(home: 0, away: 0, apiStatus: .none))
         vm = ScoreboardViewModel(store: mockStore)
     }
 
@@ -48,7 +48,7 @@ class ScoreboardViewModelTests: XCTestCase {
     
     func testShowAlert_UpdatesShowAlert_OnPostScoreSuccess() {
         let expectationReceiveValues = expectation(description: "receiveValue")
-        vm.$showAlert.collect(2).sink { showAlertValues in
+        vm.$showAPISuccessAlert.collect(2).sink { showAlertValues in
             guard let firstAlertValue = showAlertValues.first,
                 let secondAlertValue = showAlertValues.last else { return XCTFail() }
             XCTAssertFalse(firstAlertValue)
