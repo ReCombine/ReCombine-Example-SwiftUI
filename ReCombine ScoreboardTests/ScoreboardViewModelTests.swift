@@ -41,7 +41,13 @@ class ScoreboardViewModelTests: XCTestCase {
             expectationReceiveAwayScore.fulfill()
         }.store(in: &cancellableSet)
         
-        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore], timeout: 10.0)
+        let expectationReceiveAPIStatus = expectation(description: "receiveAPIStatus")
+        vm.$apiStatus.sink { apiStatus in
+            XCTAssertEqual(.none, apiStatus)
+            expectationReceiveAPIStatus.fulfill()
+        }.store(in: &cancellableSet)
+                
+        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore, expectationReceiveAPIStatus], timeout: 10.0)        
     }
     
     // MARK: - showAlert Effect
