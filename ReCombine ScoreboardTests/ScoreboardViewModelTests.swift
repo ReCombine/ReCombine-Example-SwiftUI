@@ -1,5 +1,5 @@
 //
-//  ReCombine_ScoreboardTests.swift
+//  ScoreboardViewModelTests.swift
 //  ReCombine ScoreboardTests
 //
 //  Created by Crowson, John on 12/10/19.
@@ -47,7 +47,7 @@ class ScoreboardViewModelTests: XCTestCase {
             expectationReceiveAPIStatus.fulfill()
         }.store(in: &cancellableSet)
                 
-        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore, expectationReceiveAPIStatus], timeout: 10.0)        
+        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore, expectationReceiveAPIStatus], timeout: 10.0)
     }
     
     // MARK: - showAlert Effect
