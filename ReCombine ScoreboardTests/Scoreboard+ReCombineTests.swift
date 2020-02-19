@@ -15,7 +15,7 @@ import XCTest
 
 class Scoreboard_ReCombineTests: XCTestCase {
     
-    let mockState = Scoreboard.State(home: 2, away: 1)
+    let mockState = Scoreboard.State(home: 2, away: 1, apiStatus: .none)
     var cancellable: AnyCancellable?
     
     // MARK: - Selectors
@@ -30,23 +30,48 @@ class Scoreboard_ReCombineTests: XCTestCase {
         XCTAssertEqual("1", result)
     }
     
+    func testGetAPIStatus() {
+        let result = Scoreboard.getAPIStatus(mockState)
+        XCTAssertEqual(.none, result)
+    }
+    
     // MARK: - Reducer
     
     func testReducer_HomeScoreAction_IncrementsHomeState() {
-        let expect = Scoreboard.State(home: 3, away: 1)
+        let expect = Scoreboard.State(home: 3, away: 1, apiStatus: .none)
         let result = Scoreboard.reducer(state: mockState, action: Scoreboard.HomeScore())
         XCTAssertEqual(expect, result)
     }
     
     func testReducer_AwayScoreAction_IncrementsAwayState() {
-        let expect = Scoreboard.State(home: 2, away: 2)
+        let expect = Scoreboard.State(home: 2, away: 2, apiStatus: .none)
         let result = Scoreboard.reducer(state: mockState, action: Scoreboard.AwayScore())
         XCTAssertEqual(expect, result)
     }
     
     func testReducer_ResetScoreAction_ResetsState() {
-        let expect = Scoreboard.State(home: 0, away: 0)
+        let expect = Scoreboard.State(home: 0, away: 0, apiStatus: .none)
         let result = Scoreboard.reducer(state: mockState, action: Scoreboard.ResetScore())
+        XCTAssertEqual(expect, result)
+    }
+    
+    func testReducer_PostScoreAction_UpdatesAPIStatusState() {
+        let expect = Scoreboard.State(home: 2, away: 1, apiStatus: .posting)
+        let result = Scoreboard.reducer(state: mockState, action: Scoreboard.PostScore(home: "", away: ""))
+        XCTAssertEqual(expect, result)
+    }
+    
+    func testReducer_PostScoreSuccessAction_UpdatesAPIStatusState() {
+        let initialState = Scoreboard.State(home: 2, away: 1, apiStatus: .posting)
+        let expect = Scoreboard.State(home: 2, away: 1, apiStatus: .none)
+        let result = Scoreboard.reducer(state: initialState, action: Scoreboard.PostScoreSuccess())
+        XCTAssertEqual(expect, result)
+    }
+    
+    func testReducer_PostScoreErrorAction_UpdatesAPIStatusState() {
+        let initialState = Scoreboard.State(home: 2, away: 1, apiStatus: .posting)
+        let expect = Scoreboard.State(home: 2, away: 1, apiStatus: .error)
+        let result = Scoreboard.reducer(state: initialState, action: Scoreboard.PostScoreError())
         XCTAssertEqual(expect, result)
     }
     

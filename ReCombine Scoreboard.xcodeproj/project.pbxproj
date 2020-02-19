@@ -20,6 +20,7 @@
 		7B49461023ECE31200A0071D /* ReCombineTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7B49460F23ECE31200A0071D /* ReCombineTest */; };
 		7B49461223ECEEB300A0071D /* Scoreboard+ReCombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49461123ECEEB300A0071D /* Scoreboard+ReCombineTests.swift */; };
 		7B49461423ECF47000A0071D /* ScoreAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B49461323ECF47000A0071D /* ScoreAPIManager.swift */; };
+		7B4946BB23FB78FE00A0071D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4946BA23FB78FE00A0071D /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		7B49460A23E8DDC300A0071D /* ScoreboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewModel.swift; sourceTree = "<group>"; };
 		7B49461123ECEEB300A0071D /* Scoreboard+ReCombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scoreboard+ReCombineTests.swift"; sourceTree = "<group>"; };
 		7B49461323ECF47000A0071D /* ScoreAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreAPIManager.swift; sourceTree = "<group>"; };
+		7B4946BA23FB78FE00A0071D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		7B4946BF23FCF0E400A0071D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 		7B4945D523E7644000A0071D = {
 			isa = PBXGroup;
 			children = (
+				7B4946BF23FCF0E400A0071D /* README.md */,
 				7B4945E023E7644000A0071D /* ReCombine Scoreboard */,
 				7B4945F723E7644600A0071D /* ReCombine ScoreboardTests */,
 				7B4945DF23E7644000A0071D /* Products */,
@@ -91,12 +95,13 @@
 		7B4945E023E7644000A0071D /* ReCombine Scoreboard */ = {
 			isa = PBXGroup;
 			children = (
+				7B4946BA23FB78FE00A0071D /* ActivityIndicator.swift */,
 				7B4945E123E7644000A0071D /* AppDelegate.swift */,
 				7B4945E323E7644000A0071D /* SceneDelegate.swift */,
+				7B49461323ECF47000A0071D /* ScoreAPIManager.swift */,
 				7B4945E523E7644000A0071D /* ScoreboardView.swift */,
 				7B49460A23E8DDC300A0071D /* ScoreboardViewModel.swift */,
 				7B49460823E7653500A0071D /* Scoreboard+ReCombine.swift */,
-				7B49461323ECF47000A0071D /* ScoreAPIManager.swift */,
 				7B4945E723E7644600A0071D /* Assets.xcassets */,
 				7B4945EC23E7644600A0071D /* LaunchScreen.storyboard */,
 				7B4945EF23E7644600A0071D /* Info.plist */,
@@ -237,6 +242,7 @@
 				7B4945E223E7644000A0071D /* AppDelegate.swift in Sources */,
 				7B4945E423E7644000A0071D /* SceneDelegate.swift in Sources */,
 				7B4945E623E7644000A0071D /* ScoreboardView.swift in Sources */,
+				7B4946BB23FB78FE00A0071D /* ActivityIndicator.swift in Sources */,
 				7B49460B23E8DDC300A0071D /* ScoreboardViewModel.swift in Sources */,
 				7B49461423ECF47000A0071D /* ScoreAPIManager.swift in Sources */,
 			);

@@ -1,5 +1,5 @@
 //
-//  ReCombine_ScoreboardTests.swift
+//  ScoreboardViewModelTests.swift
 //  ReCombine ScoreboardTests
 //
 //  Created by Crowson, John on 12/10/19.
@@ -18,7 +18,7 @@ class ScoreboardViewModelTests: XCTestCase {
     var cancellableSet: Set<AnyCancellable> = []
 
     override func setUp() {
-        mockStore = MockStore(state: Scoreboard.State())
+        mockStore = MockStore(state: Scoreboard.State(home: 0, away: 0, apiStatus: .none))
         vm = ScoreboardViewModel(store: mockStore)
     }
 
@@ -41,14 +41,20 @@ class ScoreboardViewModelTests: XCTestCase {
             expectationReceiveAwayScore.fulfill()
         }.store(in: &cancellableSet)
         
-        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore], timeout: 10.0)
+        let expectationReceiveAPIStatus = expectation(description: "receiveAPIStatus")
+        vm.$apiStatus.sink { apiStatus in
+            XCTAssertEqual(.none, apiStatus)
+            expectationReceiveAPIStatus.fulfill()
+        }.store(in: &cancellableSet)
+                
+        wait(for: [expectationReceiveHomeScore, expectationReceiveAwayScore, expectationReceiveAPIStatus], timeout: 10.0)
     }
     
     // MARK: - showAlert Effect
     
     func testShowAlert_UpdatesShowAlert_OnPostScoreSuccess() {
         let expectationReceiveValues = expectation(description: "receiveValue")
-        vm.$showAlert.collect(2).sink { showAlertValues in
+        vm.$showAPISuccessAlert.collect(2).sink { showAlertValues in
             guard let firstAlertValue = showAlertValues.first,
                 let secondAlertValue = showAlertValues.last else { return XCTFail() }
             XCTAssertFalse(firstAlertValue)

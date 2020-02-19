@@ -35,13 +35,24 @@ struct ScoreboardView: View {
                     })
                 }
             }
-            Button(action: {
-                self.viewModel.postScoreTapped()
-            }, label: {
-                Text("Post Score")
-            })
-        }.alert(isPresented: $viewModel.showAlert) {
+            getAPIStatusView()
+        }.alert(isPresented: $viewModel.showAPISuccessAlert) {
             Alert(title: Text("Scoreboard Posted Successfully"), message: Text("The current scoreboard will be reset."), dismissButton: .default(Text("Got it!")))
+        }
+    }
+    
+    func getAPIStatusView() -> AnyView {
+        switch viewModel.apiStatus {
+            case .none:
+                return AnyView(Button(action: {
+                    self.viewModel.postScoreTapped()
+                }, label: {
+                    Text("Post Score")
+                }))
+            case .posting:
+                return AnyView(ActivityIndicator())
+            case .error:
+                return AnyView(Text("Error posting score"))
         }
     }
 }

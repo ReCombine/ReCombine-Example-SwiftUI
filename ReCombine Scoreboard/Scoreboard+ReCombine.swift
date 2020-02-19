@@ -13,28 +13,36 @@ import ReCombine
 
 // MARK: - Store
 
-let appStore = Store(reducer: Scoreboard.reducer, initialState: Scoreboard.State(), effects: [Scoreboard.postScore])
+let appStore = Store(reducer: Scoreboard.reducer, initialState: Scoreboard.State(home: 0, away: 0, apiStatus: .none), effects: [Scoreboard.postScore])
 
 enum Scoreboard {
     
     // MARK: - State
     
     struct State: Equatable {
-        var home = 0
-        var away = 0
+        // Current score state
+        let home: Int
+        let away: Int
+        
+        // Posting score to API status
+        let apiStatus: ScoreAPIStatus
     }
     
     // MARK: - Memoized State Selectors
     
     static let getHomeScoreString = createSelector({ (state: State) in state.home }, transformation: { score in
-        // Only runs if state.home changes
+        // Only runs transformation if state.home changes
         return String(score)
     })
     
     static let getAwayScoreString = createSelector({ (state: State) in state.away }, transformation: { score in
-        // Only runs if state.away changes
+        // Only runs transformation if state.away changes
         return String(score)
     })
+    
+    // MARK: - State Selectors
+    
+    static let getAPIStatus = { (state: State) in state.apiStatus }
     
     // MARK: - Actions
     
@@ -53,11 +61,41 @@ enum Scoreboard {
     static func reducer(state: State, action: Action) -> State {
         switch action {
             case _ as HomeScore:
-                return State(home: state.home + 1, away: state.away)
+                return State(
+                    home: state.home + 1,
+                    away: state.away,
+                    apiStatus: state.apiStatus
+                )
             case _ as AwayScore:
-                return State(home: state.home, away: state.away + 1)
+                return State(
+                    home: state.home,
+                    away: state.away + 1,
+                    apiStatus: state.apiStatus
+                )
             case _ as ResetScore:
-                return State(home: 0, away: 0)
+                return State(
+                    home: 0,
+                    away: 0,
+                    apiStatus: state.apiStatus
+                )
+            case _ as PostScore:
+                return State(
+                    home: state.home,
+                    away: state.away,
+                    apiStatus: .posting
+                )
+            case _ as PostScoreSuccess:
+                return State(
+                    home: state.home,
+                    away: state.away,
+                    apiStatus: .none
+                )
+            case _ as PostScoreError:
+                return State(
+                    home: state.home,
+                    away: state.away,
+                    apiStatus: .error
+                )
             default:
                 return state
         }
@@ -69,6 +107,7 @@ enum Scoreboard {
         actions
             .ofType(PostScore.self)
             .flatMap(getPostAPI)
+            .receive(on: RunLoop.main)
             .eraseToAnyPublisher()
     }
     
