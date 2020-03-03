@@ -16,12 +16,9 @@ class ScoreboardViewModel: ObservableObject {
     @Published var awayScore = ""
     @Published var apiStatus: ScoreAPIStatus = .none
     @Published var showAPISuccessAlert = false
-    private let store: Store<Scoreboard.State>
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init(store: Store<Scoreboard.State> = appStore) {
-        self.store = store
-        
+    init() {
         // Bind selectors
         store.select(Scoreboard.getHomeScoreString).assign(to: \.homeScore, on: self).store(in: &cancellableSet)
         store.select(Scoreboard.getAwayScoreString).assign(to: \.awayScore, on: self).store(in: &cancellableSet)

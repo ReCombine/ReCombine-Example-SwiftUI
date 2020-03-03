@@ -13,7 +13,11 @@ import ReCombine
 
 // MARK: - Store
 
-let appStore = Store(reducer: Scoreboard.reducer, initialState: Scoreboard.State(home: 0, away: 0, apiStatus: .none), effects: [Scoreboard.postScore])
+#if DEBUG
+var store = Store(reducer: Scoreboard.reducer, initialState: Scoreboard.State(home: 0, away: 0, apiStatus: .none), effects: [Scoreboard.postScore])
+#else
+let store = Store(reducer: Scoreboard.reducer, initialState: Scoreboard.State(home: 0, away: 0, apiStatus: .none), effects: [Scoreboard.postScore])
+#endif
 
 enum Scoreboard {
     
