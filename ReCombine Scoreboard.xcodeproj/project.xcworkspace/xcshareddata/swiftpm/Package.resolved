@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ReCombine",
+        "repositoryURL": "https://github.com/recombine/recombine.git",
+        "state": {
+          "branch": "master",
+          "revision": "bd4a571bf1c560167105c006527a8e031ec52a53",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
