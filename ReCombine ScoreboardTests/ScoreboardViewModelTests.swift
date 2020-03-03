@@ -19,7 +19,8 @@ class ScoreboardViewModelTests: XCTestCase {
 
     override func setUp() {
         mockStore = MockStore(state: Scoreboard.State(home: 0, away: 0, apiStatus: .none))
-        vm = ScoreboardViewModel(store: mockStore)
+        store = mockStore // override global store, used by view model.
+        vm = ScoreboardViewModel()
     }
 
     override func tearDown() {
