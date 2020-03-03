@@ -1,12 +1,17 @@
-on: push
+name: Test Project
+
+on: [push]
+
 jobs:
-  test:
+  build:
+
     runs-on: macOS-latest
+
     steps:
-    - uses: actions/checkout@master
-    - name: Set XCode Version
-      run: sudo xcode-select -s /Applications/Xcode_11.app
-    - name: Test
-      run: |
-        ls -al
-        xcodebuild test -project ReCombine-Scoreboard-SwiftUI.xcodeproj -scheme ReCombine-Scoreboard-SwiftUITests -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.0"
+    - uses: actions/checkout@v1
+    - name: Force Xcode 11
+      run: sudo xcode-select -switch /Applications/Xcode_11.3.app
+    - name: Run tests
+      run: xcodebuild clean test -project "ReCombine-Scoreboard-SwiftUI.xcodeproj" -scheme "ReCombine-Scoreboard-SwiftUI" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+    - name: Build App
+      run: xcodebuild -project "ReCombine-Scoreboard-SwiftUI.xcodeproj" -scheme "ReCombine-Scoreboard-SwiftUI" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
