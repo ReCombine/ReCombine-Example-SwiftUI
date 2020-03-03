@@ -9,7 +9,7 @@
 
 import Combine
 import ReCombine
-@testable import ReCombine_Scoreboard
+@testable import ReCombine_Scoreboard_SwiftUI
 import ReCombineTest
 import XCTest
 

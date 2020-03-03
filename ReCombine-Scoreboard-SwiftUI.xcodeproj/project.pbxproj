@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B4945DE23E7644000A0071D /* ReCombine Scoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReCombine Scoreboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4945DE23E7644000A0071D /* ReCombine-Scoreboard-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReCombine-Scoreboard-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4945E123E7644000A0071D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B4945E323E7644000A0071D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B4945E523E7644000A0071D /* ScoreboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardView.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		7B4945EA23E7644600A0071D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B4945ED23E7644600A0071D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B4945EF23E7644600A0071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7B4945F423E7644600A0071D /* ReCombine ScoreboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReCombine ScoreboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B4945F423E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReCombine-Scoreboard-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4945F823E7644600A0071D /* ScoreboardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreboardViewModelTests.swift; sourceTree = "<group>"; };
 		7B4945FA23E7644600A0071D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B49460823E7653500A0071D /* Scoreboard+ReCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scoreboard+ReCombine.swift"; sourceTree = "<group>"; };
@@ -77,8 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				7B4946BF23FCF0E400A0071D /* README.md */,
-				7B4945E023E7644000A0071D /* ReCombine Scoreboard */,
-				7B4945F723E7644600A0071D /* ReCombine ScoreboardTests */,
+				7B4945E023E7644000A0071D /* ReCombine-Scoreboard-SwiftUI */,
+				7B4945F723E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests */,
 				7B4945DF23E7644000A0071D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,13 +86,13 @@
 		7B4945DF23E7644000A0071D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7B4945DE23E7644000A0071D /* ReCombine Scoreboard.app */,
-				7B4945F423E7644600A0071D /* ReCombine ScoreboardTests.xctest */,
+				7B4945DE23E7644000A0071D /* ReCombine-Scoreboard-SwiftUI.app */,
+				7B4945F423E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7B4945E023E7644000A0071D /* ReCombine Scoreboard */ = {
+		7B4945E023E7644000A0071D /* ReCombine-Scoreboard-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				7B4946BA23FB78FE00A0071D /* ActivityIndicator.swift */,
@@ -107,7 +107,7 @@
 				7B4945EF23E7644600A0071D /* Info.plist */,
 				7B4945E923E7644600A0071D /* Preview Content */,
 			);
-			path = "ReCombine Scoreboard";
+			path = "ReCombine-Scoreboard-SwiftUI";
 			sourceTree = "<group>";
 		};
 		7B4945E923E7644600A0071D /* Preview Content */ = {
@@ -118,22 +118,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7B4945F723E7644600A0071D /* ReCombine ScoreboardTests */ = {
+		7B4945F723E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests */ = {
 			isa = PBXGroup;
 			children = (
 				7B4945F823E7644600A0071D /* ScoreboardViewModelTests.swift */,
 				7B4945FA23E7644600A0071D /* Info.plist */,
 				7B49461123ECEEB300A0071D /* Scoreboard+ReCombineTests.swift */,
 			);
-			path = "ReCombine ScoreboardTests";
+			path = "ReCombine-Scoreboard-SwiftUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7B4945DD23E7644000A0071D /* ReCombine Scoreboard */ = {
+		7B4945DD23E7644000A0071D /* ReCombine-Scoreboard-SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B4945FD23E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine Scoreboard" */;
+			buildConfigurationList = 7B4945FD23E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-SwiftUI" */;
 			buildPhases = (
 				7B4945DA23E7644000A0071D /* Sources */,
 				7B4945DB23E7644000A0071D /* Frameworks */,
@@ -143,17 +143,17 @@
 			);
 			dependencies = (
 			);
-			name = "ReCombine Scoreboard";
+			name = "ReCombine-Scoreboard-SwiftUI";
 			packageProductDependencies = (
 				7B49460D23ECE31200A0071D /* ReCombine */,
 			);
 			productName = "ReCombine Scoreboard";
-			productReference = 7B4945DE23E7644000A0071D /* ReCombine Scoreboard.app */;
+			productReference = 7B4945DE23E7644000A0071D /* ReCombine-Scoreboard-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7B4945F323E7644600A0071D /* ReCombine ScoreboardTests */ = {
+		7B4945F323E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B49460023E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine ScoreboardTests" */;
+			buildConfigurationList = 7B49460023E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-SwiftUITests" */;
 			buildPhases = (
 				7B4945F023E7644600A0071D /* Sources */,
 				7B4945F123E7644600A0071D /* Frameworks */,
@@ -164,12 +164,12 @@
 			dependencies = (
 				7B4945F623E7644600A0071D /* PBXTargetDependency */,
 			);
-			name = "ReCombine ScoreboardTests";
+			name = "ReCombine-Scoreboard-SwiftUITests";
 			packageProductDependencies = (
 				7B49460F23ECE31200A0071D /* ReCombineTest */,
 			);
 			productName = "ReCombine ScoreboardTests";
-			productReference = 7B4945F423E7644600A0071D /* ReCombine ScoreboardTests.xctest */;
+			productReference = 7B4945F423E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +191,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7B4945D923E7644000A0071D /* Build configuration list for PBXProject "ReCombine Scoreboard" */;
+			buildConfigurationList = 7B4945D923E7644000A0071D /* Build configuration list for PBXProject "ReCombine-Scoreboard-SwiftUI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -207,8 +207,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B4945DD23E7644000A0071D /* ReCombine Scoreboard */,
-				7B4945F323E7644600A0071D /* ReCombine ScoreboardTests */,
+				7B4945DD23E7644000A0071D /* ReCombine-Scoreboard-SwiftUI */,
+				7B4945F323E7644600A0071D /* ReCombine-Scoreboard-SwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -262,7 +262,7 @@
 /* Begin PBXTargetDependency section */
 		7B4945F623E7644600A0071D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B4945DD23E7644000A0071D /* ReCombine Scoreboard */;
+			target = 7B4945DD23E7644000A0071D /* ReCombine-Scoreboard-SwiftUI */;
 			targetProxy = 7B4945F523E7644600A0071D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -398,15 +398,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ReCombine Scoreboard/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ReCombine-Scoreboard-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = W25U99UGA7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "ReCombine Scoreboard/Info.plist";
+				INFOPLIST_FILE = "ReCombine-Scoreboard-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -418,15 +418,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ReCombine Scoreboard/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ReCombine-Scoreboard-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = W25U99UGA7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "ReCombine Scoreboard/Info.plist";
+				INFOPLIST_FILE = "ReCombine-Scoreboard-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "JohnCrowson.ReCombine-Scoreboard-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,7 +440,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W25U99UGA7;
-				INFOPLIST_FILE = "ReCombine ScoreboardTests/Info.plist";
+				INFOPLIST_FILE = "ReCombine-Scoreboard-SwiftUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +451,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReCombine Scoreboard.app/ReCombine Scoreboard";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReCombine-Scoreboard-SwiftUI.app/ReCombine-Scoreboard-SwiftUI";
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W25U99UGA7;
-				INFOPLIST_FILE = "ReCombine ScoreboardTests/Info.plist";
+				INFOPLIST_FILE = "ReCombine-Scoreboard-SwiftUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,14 +473,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReCombine Scoreboard.app/ReCombine Scoreboard";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReCombine-Scoreboard-SwiftUI.app/ReCombine-Scoreboard-SwiftUI";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B4945D923E7644000A0071D /* Build configuration list for PBXProject "ReCombine Scoreboard" */ = {
+		7B4945D923E7644000A0071D /* Build configuration list for PBXProject "ReCombine-Scoreboard-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B4945FB23E7644600A0071D /* Debug */,
@@ -489,7 +489,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B4945FD23E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine Scoreboard" */ = {
+		7B4945FD23E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B4945FE23E7644600A0071D /* Debug */,
@@ -498,7 +498,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B49460023E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine ScoreboardTests" */ = {
+		7B49460023E7644600A0071D /* Build configuration list for PBXNativeTarget "ReCombine-Scoreboard-SwiftUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B49460123E7644600A0071D /* Debug */,
