@@ -9,5 +9,4 @@ jobs:
     - name: Test
       run: |
         ls -al
-        xcodebuild test -project ReCombine-Scoreboard-SwiftUI.xcodeproj -scheme ReCombine-Scoreboard-SwiftUITests -sdk iphonesimulator -destination "platform=iOS Simulator,id=2E172B25-7015-4615-B50E-362277005F3F"
-
+        xcodebuild test -project ReCombine-Scoreboard-SwiftUI.xcodeproj -scheme ReCombine-Scoreboard-SwiftUITests -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.0"
